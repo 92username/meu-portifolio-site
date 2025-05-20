@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%; /* black */
+    --foreground: 0 0% 100%; /* white */
+    --card: 20 0% 4%; /* almost black for cards, if needed, or use tertiary */
+    --card-foreground: 0 0% 100%;
+    --popover: 20 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 24 100% 50%; /* #FF6500 */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 210 50% 25%; /* #1E3E62 */
+    --secondary-foreground: 0 0% 100%; /* white */
+    --tertiary: 210 70% 11%; /* #0B192C */
+    --tertiary-foreground: 0 0% 100%; /* white */
+    --muted: 210 30% 15%; /* A darker muted color */
+    --muted-foreground: 0 0% 60%; /* Lighter gray for muted text */
+    --accent: 24 100% 50%; /* #FF6500 for accents */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%; /* Default destructive, can be adjusted */
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 50% 25%; /* Using secondary for borders */
+    --input: 210 70% 11%; /* Using tertiary for input backgrounds */
+    --ring: 24 100% 50%; /* #FF6500 for rings */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Keeping dark mode consistent with the new palette */
+    --background: 0 0% 0%; /* black */
+    --foreground: 0 0% 100%; /* white */
+    --card: 210 70% 11%; /* #0B192C */
+    --card-foreground: 0 0% 100%;
+    --popover: 210 70% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 24 100% 50%; /* #FF6500 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 50% 25%; /* #1E3E62 */
+    --secondary-foreground: 0 0% 100%;
+    --tertiary: 210 70% 11%; /* #0B192C */
+    --tertiary-foreground: 0 0% 100%;
+    --muted: 210 30% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%; /* Adjusted destructive for dark */
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 50% 25%;
+    --input: 210 70% 11%;
+    --ring: 24 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-primary to-secondary;
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container {
+  @apply px-4 md:px-6 mx-auto max-w-7xl;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.nav-link {
+  @apply relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.active-nav-link::after {
+  @apply w-full;
+}
+
+.skill-badge {
+  @apply px-3 py-1 rounded-full text-sm font-medium bg-secondary text-secondary-foreground transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+}
+
+.project-card {
+  @apply overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.contact-input {
+  @apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.contact-textarea {
+  @apply flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
