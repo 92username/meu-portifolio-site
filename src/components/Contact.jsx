@@ -94,7 +94,14 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formsubmit.co/lvsr9663@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://92username.github.io/meu-portifolio-site/#contact" />
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-sm font-medium">
@@ -105,9 +112,7 @@ const Contact = () => {
                     name="name"
                     type="text"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary" // Input styling
+                    className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -120,28 +125,26 @@ const Contact = () => {
                     name="email"
                     type="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary" // Input styling
+                    className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary"
                     placeholder="seu.email@exemplo.com"
                   />
                 </div>
               </div>
+
               <div className="space-y-2">
                 <label htmlFor="subject" className="block text-sm font-medium">
                   Assunto
                 </label>
                 <input
                   id="subject"
-                  name="subject"
+                  name="_subject"
                   type="text"
                   required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary" // Input styling
+                  className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary"
                   placeholder="Assunto da mensagem"
                 />
               </div>
+
               <div className="space-y-2">
                 <label htmlFor="message" className="block text-sm font-medium">
                   Mensagem
@@ -151,33 +154,18 @@ const Contact = () => {
                   name="message"
                   rows={5}
                   required
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary" // Input styling
+                  className="contact-input bg-background/50 border-border focus:ring-primary focus:border-primary"
                   placeholder="Sua mensagem..."
                 ></textarea>
               </div>
+
               <div>
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting} 
-                  className="w-full gradient-bg text-primary-foreground hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                <button
+                  type="submit"
+                  className="w-full gradient-bg text-primary-foreground hover:opacity-90 transition-opacity flex items-center justify-center gap-2 py-2 px-4 rounded"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <motion.div 
-                        className="w-5 h-5 border-2 border-transparent border-t-current rounded-full"
-                        animate={{ rotate: 360 }} 
-                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                      />
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      Enviar Mensagem <Send size={18} />
-                    </>
-                  )}
-                </Button>
+                  Enviar Mensagem ✉️
+                </button>
               </div>
             </form>
           </motion.div>
