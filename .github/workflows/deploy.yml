@@ -28,4 +28,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: 92username/meu-portifolio-site
+          publish_branch: gh-pages
           publish_dir: ./dist
+          force_orphan: true
