@@ -5,4 +5,3 @@ export default {
 	},
 };
 
-// fake commit to trigger a new build
