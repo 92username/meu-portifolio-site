@@ -145,9 +145,14 @@ const Projects = () => {
                 }
               }}
             >
-              <div className="relative overflow-hidden">
-                <img  src={`/images/projects/${project.image}.png`}  alt={project.title}  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div className="w-full h-[180px] overflow-hidden rounded-t-lg">
+  <img
+    src={`/images/projects/${project.image}.png`}
+    alt={project.title}
+    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  />
+</div>
+
                   {/* Overlay content can be styled with primary/secondary for accents if needed */}
                 </div>
               </div>
