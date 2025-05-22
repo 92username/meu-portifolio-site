@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "RAG com LangChain e ChromaDB",
       description: "Chatbot com recuperação de contexto e documentação estruturada, utilizando LangChain e ChromaDB.",
-      image: "langchain", // se quiser trocar, personalize depois
+      image: "rag-langchain", // se quiser trocar, personalize depois
       category: "ia",
       tags: ["LangChain", "ChromaDB", "RAG"],
       demoLink: "https://estudamais.tamanduas.dev/",
@@ -21,7 +21,7 @@ const Projects = () => {
       id: 2,
       title: "Deploy Automático com GitHub Actions",
       description: "Tutorial completo de CI/CD com Docker, GitHub Actions, build e deploy automatizado.",
-      image: "ci-cd",
+      image: "deploy-github-actions",
       category: "devops",
       tags: ["CI/CD", "GitHub Actions", "Docker"],
       demoLink: "https://github.com/92username/CI-CD-tutorial-completo",
@@ -31,7 +31,7 @@ const Projects = () => {
       id: 3,
       title: "Gerador de Exercícios com ChatGPT",
       description: "Aplicação com IA que gera listas de exercícios com base em tema, linguagem e dificuldade.",
-      image: "chatbox",
+      image: "chatgpt-generator",
       category: "ia",
       tags: ["OpenAI", "Python", "Streamlit"],
       demoLink: "https://chatbox.tamanduas.dev/",
@@ -41,7 +41,7 @@ const Projects = () => {
       id: 4,
       title: "AI Resume Optimizer (ATS)",
       description: "Ferramenta que gera currículos otimizados para sistemas ATS com base em IA.",
-      image: "ats",
+      image: "resume-optimizer",
       category: "ia",
       tags: ["OpenAI", "NLP", "ATS"],
       demoLink: "https://resume.tamanduas.dev/",
@@ -51,7 +51,7 @@ const Projects = () => {
       id: 5,
       title: "Desafio Lacrei DevSecOps",
       description: "Pipeline com foco em segurança, usando ZAP, secrets scanning e GitHub Actions.",
-      image: "devsecops",
+      image: "devsecops-lacrei",
       category: "devops",
       tags: ["DevSecOps", "GitHub Actions", "OWASP ZAP"],
       demoLink: "https://github.com/92username/desafio-lacrei-saude-devops",
@@ -61,7 +61,7 @@ const Projects = () => {
       id: 6,
       title: "Script de Instalação Linux",
       description: "Shell script automatizado para setup de apps e ambientes em distribuições baseadas em Debian.",
-      image: "bash-setup",
+      image: "script-linux",
       category: "automacao",
       tags: ["Bash", "Automação", "Linux"],
       demoLink: "https://github.com/92username/script-instalacao_apps",
@@ -146,7 +146,7 @@ const Projects = () => {
               }}
             >
               <div className="relative overflow-hidden aspect-video">
-                <img  alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1642132652860-471b4228023e" />
+                <img  src={`/images/projects/${project.image}.png`}  alt={project.title}  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   {/* Overlay content can be styled with primary/secondary for accents if needed */}
                 </div>
