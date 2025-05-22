@@ -146,16 +146,13 @@ const Projects = () => {
               }}
             >
               <div className="w-full h-[180px] overflow-hidden rounded-t-lg">
-  <img
-    src={`/images/projects/${project.image}.png`}
-    alt={project.title}
-    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-  />
-</div>
-
-                  {/* Overlay content can be styled with primary/secondary for accents if needed */}
-                </div>
+                <img
+                  src={`/images/projects/${project.image}.png`}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
               </div>
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-primary group-hover:text-primary/90 transition-colors">{project.title}</h3> {/* Title to primary */}
                 <p className="text-sm text-foreground/70 mb-4 h-16 overflow-hidden">
