@@ -14,8 +14,8 @@ const Projects = () => {
       image: "rag-langchain", // se quiser trocar, personalize depois
       category: "ia",
       tags: ["LangChain", "ChromaDB", "RAG"],
-      demoLink: "https://estudamais.tamanduas.dev/",
-      githubLink: "https://github.com/92username/langchain-quickstart"
+      demoLink: "https://estudamais.tech/luiza",
+      githubLink: "https://github.com/92username/luiza-AI-assistant"
     },
     {
       id: 2,
