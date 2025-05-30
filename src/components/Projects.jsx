@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "RAG com LangChain e ChromaDB",
       description: "Chatbot com recuperação de contexto e documentação estruturada, utilizando LangChain e ChromaDB.",
-      image: "rag-langchain", // se quiser trocar, personalize depois
+      image: "rag-langchain", 
       category: "ia",
       tags: ["LangChain", "ChromaDB", "RAG"],
       demoLink: "https://estudamais.tech/luiza",
