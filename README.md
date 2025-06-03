@@ -48,34 +48,6 @@ meu-portifolio-site/
 └── vite.config.js        # Configuração do Vite
 ```
 
-## 🔧 Instalação e Execução
-
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/92username/meu-portifolio-site.git
-   cd meu-portifolio-site
-   ```
-
-2. **Instale as dependências**
-   ```bash
-   npm install
-   ```
-
-3. **Execute o projeto em desenvolvimento**
-   ```bash
-   npm run dev
-   ```
-
-4. **Gere build para produção**
-   ```bash
-   npm run build
-   ```
-
-5. **Deploy no GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
-
 ## 🌐 Deploy
 
 O projeto está configurado para deploy automático no GitHub Pages usando o workflow do GitHub Actions. Cada push para a branch principal inicia automaticamente o processo de build e deploy.
